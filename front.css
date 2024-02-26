@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    transition: .4s;
+}
+
+.container {
+    width:380px;
+    height: fit-content;
+    background: rgba(221, 160, 254, 0.757);
+    border-radius: 10px;
+}
+
+.section-time{
+    height: 50px;
+    text-align: center;
+    margin:10px;
+    font-size: 2rem;
+    font-family: 'Roboto mono',  monospace;
+    letter-spacing: 3px;
+    background:#fff;
+    border-radius: 10px;
+    padding:8px;
+    
+}
+
+.section-btns{
+    height:fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin:20px;
+}
+
+ .section-btns button{
+    color:#fff;
+    width: 70px;
+    height: 30px;
+    background: #8c52ff;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: 550;
+}
+
+.section-btns button:nth-child(2){
+    background: red;
+}
+.section-btns button:nth-child(3) {
+    background: orange;
+}
+
+.section-btns button:nth-child(4) {
+    background: yellow;
+    color: black;
+}
+
+.show-laps{
+    height:250px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px dashed rgba(255, 166, 0, 0.661);
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding:10px;
+    box-shadow: 0 0 20px rgba(65, 5, 145, 0.25);
+}
+
+
+.show-laps::-webkit-scrollbar{
+    width:0;
+    height:0;
+    visibility: hidden;
+}
+
+.lap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-laps {
+width:100%;
+position: sticky;
+bottom: 0;
+font-size: 1.5rem;
+padding: 5px;
+background: rgba(6, 5, 6, 0.62);
+border-radius: 10px;
+color: #fff;
+}
+
+
+span{
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width:360px){
+    body{
+        height: 100vh;
+        width: 100vw;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .container{
+        width: 340px;
+        height: 100%;
+    }
+    .section-time{
+        margin:30% 10px;
+    }
+
+    .section-btns{
+        width: 300px;
+        display: grid;
+        grid-template-columns:repeat(autofit(90px));
+        grid-auto-flow: column;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    button{
+        width:fit-content;
+        z-index: 10;
+    }
+        .show-laps{
+            margin-top: 10%;
+            height: 350px;
+        }
+    .show-laps .section-time {
+        margin: 10px;    
+    }
+}
